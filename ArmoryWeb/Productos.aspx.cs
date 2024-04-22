@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using System.Diagnostics;
 
 namespace ArmoryWeb
 {
@@ -12,6 +13,12 @@ namespace ArmoryWeb
         protected void Page_Load(object sender, EventArgs e)
         {
 
+        }
+
+        protected void Unnamed_Click(object sender, ImageClickEventArgs e)
+        {
+            Response.Redirect("Cover.aspx");
+            Debug.WriteLine("Hola");
         }
     }
 }

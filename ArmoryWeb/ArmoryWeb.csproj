@@ -73,6 +73,10 @@
     <Content Include="assets\dist\css\bootstrap.rtl.min.css" />
     <Content Include="assets\dist\js\bootstrap.bundle.min.js" />
     <Content Include="assets\images\arrow.png" />
+    <Content Include="assets\images\carousel1.jpg" />
+    <Content Include="assets\images\carousel2.jpg" />
+    <Content Include="assets\images\carousel3.jpg" />
+    <Content Include="assets\images\cover2.jpg" />
     <Content Include="assets\images\logo.png" />
     <Content Include="assets\images\cover.jpg" />
     <Content Include="assets\js\color-modes.js" />
@@ -82,7 +86,7 @@
     <Content Include="carousel.css" />
     <Content Include="master.css" />
     <Content Include="Web.config" />
-    <Content Include="Index.aspx" />
+    <Content Include="Productos.aspx" />
     <Content Include="Cover.aspx" />
   </ItemGroup>
   <ItemGroup>
@@ -94,12 +98,12 @@
     <Compile Include="Menu.Master.designer.cs">
       <DependentUpon>Menu.Master</DependentUpon>
     </Compile>
-    <Compile Include="Index.aspx.cs">
-      <DependentUpon>Index.aspx</DependentUpon>
+    <Compile Include="Productos.aspx.cs">
+      <DependentUpon>Productos.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Index.aspx.designer.cs">
-      <DependentUpon>Index.aspx</DependentUpon>
+    <Compile Include="Productos.aspx.designer.cs">
+      <DependentUpon>Productos.aspx</DependentUpon>
     </Compile>
     <Compile Include="Cover.aspx.cs">
       <DependentUpon>Cover.aspx</DependentUpon>
@@ -113,8 +117,12 @@
     <Content Include="assets\dist\css\bootstrap.min.css.map" />
     <Content Include="assets\dist\css\bootstrap.rtl.min.css.map" />
     <Content Include="assets\dist\js\bootstrap.bundle.min.js.map" />
+    <Content Include="assets\images\Convex_Sheriff.webp" />
     <None Include="packages.config" />
     <Content Include="Menu.Master" />
+    <None Include="Properties\PublishProfiles\ArmoryWeb20240422194005 - Web Deploy.pubxml" />
+    <None Include="Properties\PublishProfiles\FolderProfile.pubxml" />
+    <None Include="Properties\PublishProfiles\FolderProfile1.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
