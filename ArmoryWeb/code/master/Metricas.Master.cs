@@ -13,5 +13,21 @@ namespace ArmoryWeb.code.master
         {
 
         }
+
+        protected void MenuItemClick(object sender, MenuEventArgs e)
+        {
+            MenuItem item = e.Item;
+            if (item.Value == "Signin")
+            {
+                Panel panel = (Panel)FindControl("modalSignin");
+                panel.Style["display"] = "block !important";
+            }
+        }
+        
+        protected void HideLogIn(object sender, EventArgs e)
+        {
+            Panel panel = (Panel)FindControl("modalSignin");
+            panel.Style["display"] = "none !important";
+        }
     }
 }

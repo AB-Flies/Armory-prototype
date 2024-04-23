@@ -192,19 +192,7 @@
           <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#sidebarMenu" aria-label="Close"></button>
         </div>
         <div class="offcanvas-body d-md-flex flex-column p-0 pt-lg-3 overflow-y-auto">
-          <asp:Menu runat="server" CssClass="nav flex-column mb-auto">
 
-              <LevelMenuItemStyles>
-                  <asp:MenuItemStyle CssClass="btn btn-outline-primary custom-btn" />
-              </LevelMenuItemStyles>
-
-              <Items>
-                  <asp:MenuItem runat="server" Text='<i class="fa-solid fa-caret-left"></i> Volver'></asp:MenuItem>
-                  <asp:MenuItem runat="server" Selected="true" Text='<i class="fa-solid fa-right-from-bracket"></i> Sign out'></asp:MenuItem>
-              </Items>
-          </asp:Menu>
-
-          <hr class="my-3">
 
           <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-body-secondary text-uppercase">
             <span>Saved reports</span>
@@ -239,6 +227,18 @@
             </li>
           </ul>
 
+          <hr class="my-3">
+          <asp:Menu runat="server" CssClass="nav flex-column mb-auto" OnMenuItemClick="MenuItemClick">
+
+              <LevelMenuItemStyles>
+                  <asp:MenuItemStyle CssClass="btn btn-outline-primary custom-btn" />
+              </LevelMenuItemStyles>
+
+              <Items>
+                  <asp:MenuItem runat="server" Text='<i class="fa-solid fa-caret-left"></i> Volver' NavigateUrl="~/code/aspx/Cover.aspx"></asp:MenuItem>
+                  <asp:MenuItem runat="server" Selected="true" Text='<i class="fa-solid fa-right-from-bracket"></i> Sign out' Value="Signin"></asp:MenuItem>
+              </Items>
+          </asp:Menu>
 
           
         </div>
@@ -395,10 +395,41 @@
 </div>
 <script src="../../assets/dist/js/bootstrap.bundle.min.js"></script>
 
-    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.3.2/dist/chart.umd.js" integrity="sha384-eI7PSr3L1XLISH8JdDII5YN/njoSsxfbrkCTnJrzXt+ENP5MOVBxD+l6sEG4zoLp" crossorigin="anonymous"></script>
-            <script src="../js/dashboard.js"></script>
             <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server"> </asp:ContentPlaceHolder>
         </div>
+
+    <asp:panel runat="server" CssClass="modal modal-sheet position-static d-block bg-body-secondary p-4 py-md-5" tabindex="-1" role="dialog" id="modalSignin" 
+            style="background-color: rgb(0 0 0 / 50%) !important; position: fixed !important; display: none !important">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content rounded-4 shadow">
+              <div class="modal-header p-5 pb-4 border-bottom-0">
+                <h1 class="fw-bold mb-0 fs-2">Sign up for free</h1>
+                <asp:button runat="server" CssClass="btn-close" OnClick="HideLogIn"></asp:button>
+              </div>
+
+              <div class="modal-body p-5 pt-0">
+                <form class="">
+                  <div class="form-floating mb-3">
+                    <input type="email" class="form-control rounded-3" id="floatingInput" placeholder="name@example.com">
+                    <label for="floatingInput">Email address</label>
+                  </div>
+                  <div class="form-floating mb-3">
+                    <input type="password" class="form-control rounded-3" id="floatingPassword" placeholder="Password">
+                    <label for="floatingPassword">Password</label>
+                  </div>
+                  <button class="w-100 mb-2 btn btn-lg rounded-3 btn-primary" type="submit">Sign up</button>
+                  <hr class="my-4">
+                  <button class="w-100 py-2 mb-2 btn btn-outline-primary rounded-3" type="submit">
+                    Register
+                  </button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </asp:panel>
+
     </form>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.3.2/dist/chart.umd.js" integrity="sha384-eI7PSr3L1XLISH8JdDII5YN/njoSsxfbrkCTnJrzXt+ENP5MOVBxD+l6sEG4zoLp" crossorigin="anonymous"></script>
+            <script src="../js/dashboard.js"></script>
 </body>
 </html>

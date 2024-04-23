@@ -49,10 +49,10 @@
 }
 
 .btn {
-    margin-left: 20px;
 }
 
 .custom-btn {
+    margin-left: 20px;
     margin-top: 20px;
     width: 100px;
     border-style: solid !important;
@@ -73,4 +73,15 @@
     --bs-btn-disabled-bg: transparent;
     --bs-btn-disabled-border-color: #dc3545;
     --bs-gradient: none;
+}
+
+
+
+.modal-sheet .modal-dialog {
+    width: 380px;
+    transition: bottom .75s ease-in-out;
+}
+
+.modal-sheet .modal-footer {
+    padding-bottom: 2rem;
 }
