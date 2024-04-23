@@ -16,11 +16,11 @@ namespace ArmoryWeb
         }
 
         protected void Menu_MenuItemClick1(object sender, MenuEventArgs e)
-        {
+        {/*
             MenuItem item = e.Item;
             if (item.Value == "Cover")
                 Response.Redirect("Cover.aspx");
-            Debug.WriteLine(item.ToString());
+            Debug.WriteLine(item.ToString());*/
         }
     }
 }

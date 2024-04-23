@@ -152,13 +152,13 @@
                     </LevelSubMenuStyles>
 
                     <LevelMenuItemStyles>
-                        <asp:MenuItemStyle CssClass="nav-link px-2 text-white" />
+                        <asp:MenuItemStyle CssClass="nav-link px-2 text-secondary" />
                     </LevelMenuItemStyles>
 
                     <Items>
-                        <asp:MenuItem Text='Cover' Selectable="true" Value="Cover"/>
+                        <asp:MenuItem Text='Cover' Value="Cover" NavigateUrl="~/Cover.aspx"/>
                         <asp:MenuItem Text='Store' NavigateUrl="#">
-                            <asp:MenuItem Text="Productos"></asp:MenuItem>
+                            <asp:MenuItem Text="Productos" Value="Productos" NavigateUrl="~/Productos.aspx"></asp:MenuItem>
                             <asp:MenuItem Text="Campos de tiro"></asp:MenuItem>
                             <asp:MenuItem Text="Mantenimiento y reparación"></asp:MenuItem>
                         </asp:MenuItem>
