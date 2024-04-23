@@ -11,7 +11,7 @@ namespace ArmoryWeb
 {
 
 
-    public partial class WebForm2
+    public partial class Mantenimiento_y_reparación
     {
     }
 }

@@ -78,40 +78,70 @@
     <Content Include="assets\images\carousel3.jpg" />
     <Content Include="assets\images\Convex_Sheriff.png" />
     <Content Include="assets\images\cover2.jpg" />
+    <Content Include="assets\images\imperium\Judge.png" />
+    <Content Include="assets\images\imperium\Operator.png" />
+    <Content Include="assets\images\imperium\Sheriff.png" />
+    <Content Include="assets\images\imperium\Tactical_Knife.png" />
+    <Content Include="assets\images\imperium\Vandal.png" />
     <Content Include="assets\images\logo.png" />
     <Content Include="assets\images\cover.jpg" />
     <Content Include="assets\js\color-modes.js" />
-    <Content Include="carousel.rtl.css" />
-    <Content Include="cover.css" />
-    <Content Include="headers.css" />
+    <Content Include="code\aspx\Metricas.aspx" />
+    <Content Include="code\css\cover.css" />
+    <Content Include="code\css\headers.css" />
+    <Content Include="code\css\dashboard.css" />
+    <Content Include="code\js\dashboard.js" />
     <Content Include="HtmlPage1.html" />
-    <Content Include="carousel.css" />
-    <Content Include="master.css" />
+    <Content Include="code\css\carousel.css" />
+    <Content Include="code\aspx\Mantenimiento.aspx" />
+    <Content Include="code\css\mantenimiento.css" />
+    <Content Include="code\css\master.css" />
     <Content Include="Web.config" />
-    <Content Include="Productos.aspx" />
-    <Content Include="Cover.aspx" />
+    <Content Include="code\aspx\Productos.aspx" />
+    <Content Include="code\aspx\Cover.aspx" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="code\aspx\Mantenimiento.aspx.cs">
+      <DependentUpon>Mantenimiento.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="code\aspx\Mantenimiento.aspx.designer.cs">
+      <DependentUpon>Mantenimiento.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="code\aspx\Metricas.aspx.cs">
+      <DependentUpon>Metricas.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="code\aspx\Metricas.aspx.designer.cs">
+      <DependentUpon>Metricas.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="code\master\Metricas.Master.cs">
+      <DependentUpon>Metricas.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="code\master\Metricas.Master.designer.cs">
+      <DependentUpon>Metricas.Master</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Menu.Master.cs">
+    <Compile Include="code\master\Menu.Master.cs">
       <DependentUpon>Menu.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Menu.Master.designer.cs">
+    <Compile Include="code\master\Menu.Master.designer.cs">
       <DependentUpon>Menu.Master</DependentUpon>
     </Compile>
-    <Compile Include="Productos.aspx.cs">
+    <Compile Include="code\aspx\Productos.aspx.cs">
       <DependentUpon>Productos.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Productos.aspx.designer.cs">
+    <Compile Include="code\aspx\Productos.aspx.designer.cs">
       <DependentUpon>Productos.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Cover.aspx.cs">
+    <Compile Include="code\aspx\Cover.aspx.cs">
       <DependentUpon>Cover.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Cover.aspx.designer.cs">
+    <Compile Include="code\aspx\Cover.aspx.designer.cs">
       <DependentUpon>Cover.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
@@ -120,8 +150,9 @@
     <Content Include="assets\dist\css\bootstrap.rtl.min.css.map" />
     <Content Include="assets\dist\js\bootstrap.bundle.min.js.map" />
     <Content Include="assets\images\Convex_Sheriff.webp" />
+    <Content Include="code\master\Metricas.Master" />
     <None Include="packages.config" />
-    <Content Include="Menu.Master" />
+    <Content Include="code\master\Menu.Master" />
     <None Include="Properties\PublishProfiles\ArmoryWeb20240422194005 - Web Deploy.pubxml" />
     <None Include="Properties\PublishProfiles\FolderProfile.pubxml" />
     <None Include="Properties\PublishProfiles\FolderProfile1.pubxml" />
@@ -132,6 +163,7 @@
       <DependentUpon>Web.config</DependentUpon>
     </None>
   </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

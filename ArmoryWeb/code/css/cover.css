@@ -2,7 +2,7 @@
     height: 100vh;
     display: flex;
     flex-direction: column-reverse;
-    background-image: url(assets/images/cover2.jpg);
+    background-image: url(../../assets/images/cover2.jpg);
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
@@ -34,7 +34,7 @@
 }
 
 footer {
-    height: 150px;
+    border-width: 0px !important;
 }
 
 body {
@@ -49,7 +49,7 @@ body {
     position: absolute;
     bottom: 0px;
     width: 100vw;
-    height: 250px;
+    height: 200px;
     background: linear-gradient(to bottom, rgb(28, 30, 31, 0) 0%, /* 0% - Opacidad del 10% en la parte superi*/
     rgba(28, 30, 31,1) 50%, /* 75% - Opacidad del 70% en la parte inferior */
     rgba(28, 30, 31, 1) 100% /* 100% - Opacidad del 90% en la parte inferior */ );

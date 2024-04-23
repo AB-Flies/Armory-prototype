@@ -95,15 +95,15 @@ body {
 }
 
 #item1::before {
-    background-image: url(assets/images/carousel1.jpg) !important;
+    background-image: url(../../assets/images/carousel1.jpg) !important;
 }
 
 #item2::before {
-    background-image: url(assets/images/carousel2.jpg) !important;
+    background-image: url(../../assets/images/carousel2.jpg) !important;
 }
 
 #item3::before {
-    background-image: url(assets/images/carousel3.jpg) !important;
+    background-image: url(../../assets/images/carousel3.jpg) !important;
 }
 
 [data-bs-theme=dark] .carousel .carousel-indicators [data-bs-target], [data-bs-theme=dark].carousel .carousel-indicators [data-bs-target] {
@@ -116,4 +116,12 @@ body {
 
 [data-bs-theme=dark] .carousel .carousel-caption, [data-bs-theme=dark].carousel .carousel-caption {
     color: white;
+}
+
+.card {
+    transition: 0.5s
+}
+
+.card:hover {
+    box-shadow: 0 0 10px white !important;
 }

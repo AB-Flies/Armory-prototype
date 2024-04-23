@@ -3,6 +3,10 @@
     --pos: center;
 }
 
+body {
+    overflow-x: hidden;
+}
+
 .icon-link > .bi {
     width: .75em;
     height: .75em;
@@ -96,8 +100,12 @@
     }
 }
 
-.auxiliar {
-    display: none;
+li:has(.auxiliar) {
+    display: none !important;
+}
+
+.fa-cart-shopping {
+    padding-right: 20px;
 }
 
 @media (max-width: 992px) {
@@ -105,8 +113,8 @@
         display: none;
     }
 
-    .auxiliar {
-        display: block;
+    li:has(.auxiliar) {
+        display: block !important
     }
     
     .nauxiliar {
@@ -115,6 +123,7 @@
 
     .fa-cart-shopping {
         padding-left: 50px;
+        padding-right: 0px;
     }
 }
 
@@ -125,8 +134,12 @@
     padding-right: 20px !important;
 }
 
-.btn {
-    transition: 0.5s !important;
+.level1.nav-link.popout {
+    padding-right: 30px !important;
+}
+
+.level1 li {
+    padding-left: 5px;
 }
 
 a.popout {
@@ -147,19 +160,16 @@ a.popout {
     padding: 4px !important;
 }
 
-.trigger li:hover .hidden {
-    opacity: 1;
-    pointer-events: auto;
-}
 .hidden {
-    display: block !important;
+    display: none !important;
     opacity: 0;
     transition: 0.5s;
     background-color: rgb(28, 30, 31);
     border: 2px solid grey;
     border-radius: 20px;
-    margin-top: 10px !important;
+    transition-delay: 0.2s;
 }
+
 
 .hidden li {
     margin: 10px;
@@ -213,24 +223,59 @@ a.popout {
 
 #Menu a.popout {
     background-image: none !important;
-    /*background-image: url(C:\Users\Aarón\source\repos\Armory_prototype\ArmoryWeb\assets\images\arrow.png) !important;
-*/
-}
-.level1.nav-link:not(:has(i, button)):hover {
-    color: black !important;
-    background: white;
 }
 
-.auxiliar:hover button{
-    color: white !important;
-    background: orange ;
-}
 
 .fa-cart-shopping {
     color: white;
     transition: 0.5s;
 }
 
-    .fa-cart-shopping:hover {
-        text-shadow: 0 0 10px white;
-    }
+.fa-cart-shopping:hover {
+    text-shadow: 0 0 10px white;
+}
+
+footer {
+    border-top: var(--bs-border-width) var(--bs-border-style) var(--bs-border-color) !important
+}
+
+.has-popup::after {
+    display: block;
+    margin-left: 4.5em;
+    /* vertical-align: 1em; */
+    top: 1.225em;
+    left: -0.225em;
+    content: "";
+    border-top: .3em solid grey;
+    border-right: .3em solid transparent;
+    border-bottom: 0;
+    border-left: .3em solid transparent;
+    position: absolute;
+    transition: 0.5s;
+}
+
+
+
+.trigger li:hover .hidden {
+    display: block !important;
+    opacity: 1;
+}
+
+.trigger li:hover a.level1:not(:has(i, button)) {
+    color: black !important;
+    background: white;
+}
+
+.trigger li:hover::after {
+    border-top: .3em solid black !important;
+}
+
+.modal-sheet .modal-dialog {
+    width: 380px;
+    transition: bottom .75s ease-in-out;
+}
+
+.modal-sheet .modal-footer {
+    padding-bottom: 2rem;
+}
+

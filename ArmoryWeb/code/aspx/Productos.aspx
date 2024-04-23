@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Menu.Master" AutoEventWireup="true" CodeBehind="Productos.aspx.cs" Inherits="ArmoryWeb.WebForm1" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/code/master/Menu.Master" AutoEventWireup="true" CodeBehind="Productos.aspx.cs" Inherits="ArmoryWeb.WebForm1" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <style>
       .bd-placeholder-img {
@@ -168,7 +168,7 @@
           display: block !important;
       }
     </style>
-    <link href="carousel.css" rel="stylesheet">
+    <link href="../css/carousel.css" rel="stylesheet">
 
 </asp:Content>
 
@@ -239,12 +239,66 @@
   <div class="album py-5 bg-body-tertiary" id="album">
     <div class="container">
 
-      <asp:panel runat="server" CssClass="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+      <asp:panel runat="server" CssClass="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3" data-masonry ='{"percentPosition": true }'>
         
         <asp:panel runat="server" CssClass="col" >
           <asp:panel runat="server" CssClass="card shadow-sm">
             <asp:Panel runat="server" CssClass="image-container">
-                <asp:ImageButton Height="225" runat="server" Width="100%" ImageUrl="~/assets/images/Convex_Sheriff.png" OnClick="Unnamed_Click"/>
+                <asp:ImageButton Height="225" runat="server" Width="100%" ImageUrl="../../assets/images/Convex_Sheriff.png" OnClick="Unnamed_Click"/>
+            </asp:Panel>
+            <asp:panel runat="server" CssClass="card-body">
+              <h5>Operator</h5>
+              <p class="card-text">Holi</p>
+              <asp:panel runat="server" CssClass="d-flex justify-content-between align-items-center">
+                <asp:panel runat="server" CssClass="btn-group">
+                  <asp:button runat="server" type="button" CssClass="btn btn-sm btn-outline-secondary" Text="View"/>
+                  <asp:button runat="server" type="button" CssClass="btn btn-sm btn-outline-secondary" Text="Edit"/>
+                </asp:panel>
+                <small class="text-body-secondary">9 mins</small>
+              </asp:panel>
+            </asp:panel>
+          </asp:panel>
+        </asp:panel>
+        <asp:panel runat="server" CssClass="col" >
+          <asp:panel runat="server" CssClass="card shadow-sm">
+            <asp:Panel runat="server" CssClass="image-container">
+                <asp:ImageButton Height="225" runat="server" Width="100%" ImageUrl="../../assets/images/Convex_Sheriff.png" OnClick="Unnamed_Click"/>
+            </asp:Panel>
+            <asp:panel runat="server" CssClass="card-body">
+              <h5>Operator</h5>
+              <p class="card-text">sadfsadfasfasasdfljasdlkfjaslñdfaskdflasdfjklasdjflkasjdflkjaslkdfjlasñfjdlñasjdfljaskdflñjasñkdfalsfjalsjdf</p>
+              <asp:panel runat="server" CssClass="d-flex justify-content-between align-items-center">
+                <asp:panel runat="server" CssClass="btn-group">
+                  <asp:button runat="server" type="button" CssClass="btn btn-sm btn-outline-secondary" Text="View"/>
+                  <asp:button runat="server" type="button" CssClass="btn btn-sm btn-outline-secondary" Text="Edit"/>
+                </asp:panel>
+                <small class="text-body-secondary">9 mins</small>
+              </asp:panel>
+            </asp:panel>
+          </asp:panel>
+        </asp:panel>
+        <asp:panel runat="server" CssClass="col" >
+          <asp:panel runat="server" CssClass="card shadow-sm">
+            <asp:Panel runat="server" CssClass="image-container">
+                <asp:ImageButton Height="225" runat="server" Width="100%" ImageUrl="../../assets/images/Convex_Sheriff.png" OnClick="Unnamed_Click"/>
+            </asp:Panel>
+            <asp:panel runat="server" CssClass="card-body">
+              <h5>Operator</h5>
+              <p class="card-text">Holi</p>
+              <asp:panel runat="server" CssClass="d-flex justify-content-between align-items-center">
+                <asp:panel runat="server" CssClass="btn-group">
+                  <asp:button runat="server" type="button" CssClass="btn btn-sm btn-outline-secondary" Text="View"/>
+                  <asp:button runat="server" type="button" CssClass="btn btn-sm btn-outline-secondary" Text="Edit"/>
+                </asp:panel>
+                <small class="text-body-secondary">9 mins</small>
+              </asp:panel>
+            </asp:panel>
+          </asp:panel>
+        </asp:panel>
+          <asp:panel runat="server" CssClass="col" >
+          <asp:panel runat="server" CssClass="card shadow-sm">
+            <asp:Panel runat="server" CssClass="image-container">
+                <asp:ImageButton Height="225" runat="server" Width="100%" ImageUrl="../../assets/images/Convex_Sheriff.png" OnClick="Unnamed_Click"/>
             </asp:Panel>
             <asp:panel runat="server" CssClass="card-body">
               <h5>Operator</h5>
@@ -264,4 +318,6 @@
   </div>
 
 </main>
+<script async src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js" integrity="sha384-GNFwBvfVxBkLMJpYMOABq3c+d3KnQxudP/mGPkzpZSTYykLBNsZEnG2D9G/X/+7D" crossorigin="anonymous"></script></body>
+
 </asp:Content>
