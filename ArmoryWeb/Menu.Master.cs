@@ -15,19 +15,12 @@ namespace ArmoryWeb
                 
         }
 
-        protected void Menu_MenuItemClick(object sender, EventArgs e)
-        {
-            Menu menu= (Menu)sender;
-            //Debug.WriteLine(sender.ToString());
-            foreach (MenuItem item in Menu.Items)
-            {
-            }
-            Debug.WriteLine("");
-        }
-
         protected void Menu_MenuItemClick1(object sender, MenuEventArgs e)
         {
-
+            MenuItem item = e.Item;
+            if (item.Value == "Cover")
+                Response.Redirect("Cover.aspx");
+            Debug.WriteLine(item.ToString());
         }
     }
 }

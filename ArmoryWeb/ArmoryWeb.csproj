@@ -83,6 +83,7 @@
     <Content Include="assets\js\color-modes.js" />
     <Content Include="carousel.rtl.css" />
     <Content Include="cover.css" />
+    <Content Include="headers.css" />
     <Content Include="HtmlPage1.html" />
     <Content Include="carousel.css" />
     <Content Include="master.css" />

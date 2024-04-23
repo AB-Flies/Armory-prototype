@@ -96,6 +96,44 @@
     }
 }
 
+.auxiliar {
+    display: none;
+}
+
+@media (max-width: 992px) {
+    #logo {
+        display: none;
+    }
+
+    .auxiliar {
+        display: block;
+    }
+    
+    .nauxiliar {
+        display: none
+    }
+
+    .fa-cart-shopping {
+        padding-left: 50px;
+    }
+}
+
+.level1.nav-link {
+    transition: 0.5s;
+    border-radius: 20px;
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+}
+
+.btn {
+    transition: 0.5s !important;
+}
+
+a.popout {
+    background-image: none !important;
+}
+
+
 .dynamic_menu {
     background: var(--bs-body-bg);
     border-radius: 10px;
@@ -113,9 +151,32 @@
     opacity: 1;
     pointer-events: auto;
 }
+.hidden {
+    display: block !important;
+    opacity: 0;
+    transition: 0.5s;
+    background-color: rgb(28, 30, 31);
+    border: 2px solid grey;
+    border-radius: 20px;
+    margin-top: 10px !important;
+}
 
-.trigger {
-    font-size: 1.15em;
+.hidden li {
+    margin: 10px;
+}
+
+.hidden li a {
+    color: rgb(108, 117, 125);
+}
+
+.hidden li a:hover {
+    color: white;
+    transition: 0.5s;
+}
+
+.carousel-control-next, .carousel-control-prev {
+    border-radius: 100%;
+    z-index: 0;
 }
 
 .hidden a {
@@ -123,8 +184,17 @@
 }
 
 .selected {
-    
-    text-shadow: 0px 0px 1px white;
+    --bs-text-opacity: 1;
+    color: rgba(var(--bs-secondary-rgb),var(--bs-text-opacity)) !important;
+}
+
+.level1 {
+    display: flex !important;
+    align-items: center;
+}
+
+.level2.selected {
+    color: white !important;
 }
 
 .static_menu {
@@ -146,3 +216,21 @@
     /*background-image: url(C:\Users\Aarón\source\repos\Armory_prototype\ArmoryWeb\assets\images\arrow.png) !important;
 */
 }
+.level1.nav-link:not(:has(i, button)):hover {
+    color: black !important;
+    background: white;
+}
+
+.auxiliar:hover button{
+    color: white !important;
+    background: orange ;
+}
+
+.fa-cart-shopping {
+    color: white;
+    transition: 0.5s;
+}
+
+    .fa-cart-shopping:hover {
+        text-shadow: 0 0 10px white;
+    }
