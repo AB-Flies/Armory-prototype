@@ -153,7 +153,7 @@
         </symbol>
     </svg>
     <main style="top: 0px; position: absolute; z-index: 1; width: 100%;"> 
-        <header class="p-3 text-bg-dark" style="background-color: rgb(28, 30, 31) !important; width: 100vw;">
+        <header class="p-3 text-bg-dark" style="background-color: rgb(28, 30, 31) !important; width: 100vw; position: fixed;">
             <div class="container">
               <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
                 
@@ -174,7 +174,7 @@
 
                     <Items>
                         <asp:MenuItem Text='Cover' Value="Cover"/>
-                        <asp:MenuItem Text='Store' NavigateUrl="#">
+                        <asp:MenuItem Text='Store' Selectable="false" NavigateUrl="">
                             <asp:MenuItem Text="Productos" Value="Productos"></asp:MenuItem>
                             <asp:MenuItem Text="Mantenimiento y reparación" Value="Mantenimiento"></asp:MenuItem>
                         </asp:MenuItem>
@@ -185,7 +185,7 @@
                 </asp:Menu>
 
                 <div class="text-end">
-                  <a href="#"> <i class="fa-solid fa-cart-shopping fa-2xl nauxiliar"></i></a>
+                   <asp:LinkButton runat="server" OnClick="GoToCart"><i class="fa-solid fa-cart-shopping fa-2xl nauxiliar"></i></asp:LinkButton>
                   <asp:button runat="server" Text="Log in" CssClass="btn btn-outline-light me-2 nauxiliar" OnClick="ShowLogIn"/>
                 </div>
               </div>

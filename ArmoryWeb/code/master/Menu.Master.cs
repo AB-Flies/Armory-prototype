@@ -5,6 +5,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Diagnostics;
+using Library;
 
 namespace ArmoryWeb
 {
@@ -20,6 +21,8 @@ namespace ArmoryWeb
         {
             string item = Request.Path.Remove(0, 11);
             item = item.Substring(0, item.LastIndexOf('.'));
+            if (item == "Cart")
+                return;
             Menu menu = (Menu)FindControl("Menu");
             if (item == "Productos" || item == "Mantenimiento")
                 menu.FindItem("Store").ChildItems[SubItems[item]].Selected = true;
@@ -51,6 +54,11 @@ namespace ArmoryWeb
         {
             Panel panel = (Panel)FindControl("modalSignin");
             panel.Style["display"] = "none !important";
+        }
+
+        protected void GoToCart(object sender, EventArgs e)
+        {
+            Response.Redirect("../aspx/Cart.aspx");
         }
     }
 }

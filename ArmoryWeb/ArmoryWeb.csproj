@@ -67,26 +67,53 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Data\create_skin_collection_table.sql" />
+    <Content Include="App_Data\Create_database.sql" />
+    <Content Include="App_Data\create_weapon_table.sql" />
+    <Content Include="App_Data\create_weapon_type_table.sql" />
+    <Content Include="App_Data\Database.mdf" />
+    <Content Include="App_Data\Database_log.ldf">
+      <DependentUpon>Database.mdf</DependentUpon>
+    </Content>
     <Content Include="assets\brand\bootstrap-logo-white.svg" />
     <Content Include="assets\brand\bootstrap-logo.svg" />
     <Content Include="assets\dist\css\bootstrap.min.css" />
     <Content Include="assets\dist\css\bootstrap.rtl.min.css" />
     <Content Include="assets\dist\js\bootstrap.bundle.min.js" />
-    <Content Include="assets\images\arrow.png" />
     <Content Include="assets\images\carousel1.jpg" />
     <Content Include="assets\images\carousel2.jpg" />
     <Content Include="assets\images\carousel3.jpg" />
+    <Content Include="assets\images\Celestial\Ares.png" />
+    <Content Include="assets\images\Celestial\Frenzy.png" />
+    <Content Include="assets\images\Celestial\Judge.png" />
+    <Content Include="assets\images\Celestial\Knife.png" />
+    <Content Include="assets\images\Celestial\Phantom.png" />
     <Content Include="assets\images\Convex_Sheriff.png" />
-    <Content Include="assets\images\cover2.jpg" />
-    <Content Include="assets\images\imperium\Judge.png" />
-    <Content Include="assets\images\imperium\Operator.png" />
-    <Content Include="assets\images\imperium\Sheriff.png" />
-    <Content Include="assets\images\imperium\Tactical_Knife.png" />
-    <Content Include="assets\images\imperium\Vandal.png" />
-    <Content Include="assets\images\logo.png" />
     <Content Include="assets\images\cover.jpg" />
+    <Content Include="assets\images\Elderflame\Frenzy.png" />
+    <Content Include="assets\images\Elderflame\Judge.png" />
+    <Content Include="assets\images\Elderflame\Knife.png" />
+    <Content Include="assets\images\Elderflame\Operator.png" />
+    <Content Include="assets\images\Elderflame\Vandal.png" />
+    <Content Include="assets\images\Imperium\Judge.png" />
+    <Content Include="assets\images\Imperium\Knife.png" />
+    <Content Include="assets\images\Imperium\Operator.png" />
+    <Content Include="assets\images\Imperium\Sheriff.png" />
+    <Content Include="assets\images\Imperium\Vandal.png" />
+    <Content Include="assets\images\logo.png" />
+    <Content Include="assets\images\Sakura\Ares.png" />
+    <Content Include="assets\images\Sakura\Classic.png" />
+    <Content Include="assets\images\Sakura\Sheriff.png" />
+    <Content Include="assets\images\Sakura\Stinger.png" />
+    <Content Include="assets\images\Sakura\Vandal.png" />
+    <Content Include="assets\images\Smite\Classic.png" />
+    <Content Include="assets\images\Smite\Judge.png" />
+    <Content Include="assets\images\Smite\Knife.png" />
+    <Content Include="assets\images\Smite\Odin.png" />
+    <Content Include="assets\images\Smite\Phantom.png" />
     <Content Include="assets\js\color-modes.js" />
     <Content Include="code\aspx\Metricas.aspx" />
+    <Content Include="code\aspx\Cart.aspx" />
     <Content Include="code\css\cover.css" />
     <Content Include="code\css\headers.css" />
     <Content Include="code\css\dashboard.css" />
@@ -114,6 +141,13 @@
     </Compile>
     <Compile Include="code\aspx\Metricas.aspx.designer.cs">
       <DependentUpon>Metricas.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="code\aspx\Cart.aspx.cs">
+      <DependentUpon>Cart.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="code\aspx\Cart.aspx.designer.cs">
+      <DependentUpon>Cart.aspx</DependentUpon>
     </Compile>
     <Compile Include="code\master\Metricas.Master.cs">
       <DependentUpon>Metricas.Master</DependentUpon>
@@ -163,7 +197,12 @@
       <DependentUpon>Web.config</DependentUpon>
     </None>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\Library\Library.csproj">
+      <Project>{60359cb5-4f91-4028-b682-40f58c211cd0}</Project>
+      <Name>Library</Name>
+    </ProjectReference>
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

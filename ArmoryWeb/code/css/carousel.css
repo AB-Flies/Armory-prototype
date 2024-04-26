@@ -125,3 +125,16 @@ body {
 .card:hover {
     box-shadow: 0 0 10px white !important;
 }
+
+.carousel-caption {
+    z-index: 0 !important;
+}
+
+.carousel-indicators {
+    z-index: 0 !important;
+}
+
+.image-container input {
+    width: 100%;
+    padding: 10px;
+}

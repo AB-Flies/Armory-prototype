@@ -261,6 +261,11 @@ footer {
     opacity: 1;
 }
 
+.trigger li a.level1{
+    cursor: pointer;
+    user-select: none;
+}
+
 .trigger li:hover a.level1:not(:has(i, button)) {
     color: black !important;
     background: white;

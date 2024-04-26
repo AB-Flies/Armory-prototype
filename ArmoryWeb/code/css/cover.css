@@ -2,7 +2,7 @@
     height: 100vh;
     display: flex;
     flex-direction: column-reverse;
-    background-image: url(../../assets/images/cover2.jpg);
+    background-image: url(../../assets/images/cover.jpg);
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
