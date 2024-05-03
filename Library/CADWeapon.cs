@@ -16,8 +16,22 @@ namespace Library
         
         public CADWeapon() { }
 
-        public bool Read(ENWeapon eNWeapon, int id)
+        public bool Read(ENWeapon weapon)
         {
+            string query = "select id, weaponType, skinCollection, stock from dbo.Weapons where id = " + weapon.Id.ToString();
+            using (SqlConnection conn = new SqlConnection(constring))
+            {
+                SqlCommand command = new SqlCommand(query, conn);
+                conn.Open();
+                using (SqlDataReader reader = command.ExecuteReader())
+                {
+                    reader.Read();
+                    weapon.Id = (int)reader[0];
+                    weapon.WeaponType = ENWeaponType.Read((string)reader[1]);
+                    weapon.SkinCollection = ENSkinCollection.Read((string)reader[2]);
+                    weapon.Stock = (int)reader[3];
+                }
+            }
             return true;
         }
 

@@ -11,7 +11,7 @@ namespace ArmoryWeb
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            DateTime d = new DateTime();
         }
     }
 }

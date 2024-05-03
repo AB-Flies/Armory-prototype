@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using System.Diagnostics;
 
 namespace ArmoryWeb.code.master
 {
@@ -11,7 +12,7 @@ namespace ArmoryWeb.code.master
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            
         }
 
         protected void MenuItemClick(object sender, MenuEventArgs e)

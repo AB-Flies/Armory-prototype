@@ -179,13 +179,11 @@
                             <asp:MenuItem Text="Mantenimiento y reparación" Value="Mantenimiento"></asp:MenuItem>
                         </asp:MenuItem>
                         <asp:MenuItem Text='Métricas' NavigateUrl="~/code/aspx/Metricas.aspx"/>
-                        <asp:MenuItem Text='<i class="fa-solid fa-cart-shopping fa-2xl auxiliar"></i>' ></asp:MenuItem>
-                        <asp:MenuItem Text='<button type="button" class="btn btn-outline-light me-2 auxiliar">Log in</button>' Value="Button"></asp:MenuItem>
                     </Items>
                 </asp:Menu>
 
                 <div class="text-end">
-                   <asp:LinkButton runat="server" OnClick="GoToCart"><i class="fa-solid fa-cart-shopping fa-2xl nauxiliar"></i></asp:LinkButton>
+                   <asp:LinkButton runat="server" OnClick="GoToCart"><i class="fa-solid fa-cart-shopping fa-2xl nauxiliar"></i><span>3</span></asp:LinkButton>
                   <asp:button runat="server" Text="Log in" CssClass="btn btn-outline-light me-2 nauxiliar" OnClick="ShowLogIn"/>
                 </div>
               </div>

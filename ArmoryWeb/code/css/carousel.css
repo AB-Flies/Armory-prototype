@@ -138,3 +138,42 @@ body {
     width: 100%;
     padding: 10px;
 }
+
+.no-stock {
+    text-shadow: #dc3545 0 0 5px;
+    color: #dc3545 !important;
+}
+
+a.d-block::after {
+    content: none;
+}
+
+@keyframes tremble {
+    25% {
+        transform: translateX(-8px);
+        color: #dc3545;
+    }
+
+    50% {
+        transform: translateX(8px);
+    }
+
+    75% {
+        transform: translateX(-8px);
+        color: #dc3545;
+    }
+
+    100% {
+        transform: translateX(0px);
+        color: #6c757d;
+    }
+}
+
+
+.trembling {
+    animation: tremble 0.5s infinite;
+}
+
+select.dropdown-item option {
+    background-color: var(--bs-dropdown-bg);
+}

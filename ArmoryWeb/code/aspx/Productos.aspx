@@ -6,7 +6,8 @@
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    
+    <asp:ScriptManager ID="ScriptManager" runat="server"></asp:ScriptManager>
+
     <svg xmlns="http://www.w3.org/2000/svg" class="d-none">
       <symbol id="check2" viewBox="0 0 16 16">
         <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/>
@@ -74,83 +75,44 @@
 
       <asp:panel runat="server" OnLoad="ReadProducts" CssClass="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3" data-masonry ='{"percentPosition": true }'>
         
-        <asp:panel runat="server" CssClass="col" >
-          <asp:panel runat="server" CssClass="card shadow-sm">
-            <asp:Panel runat="server" CssClass="image-container">
-                <asp:ImageButton runat="server" ImageUrl="../../assets/images/Convex_Sheriff.png" OnClick="Unnamed_Click"/>
-            </asp:Panel>
-            <asp:panel runat="server" CssClass="card-body">
-              <h5>Operator</h5>
-              <p class="card-text">Holi</p>
-              <asp:panel runat="server" CssClass="d-flex justify-content-between align-items-center">
-                <asp:panel runat="server" CssClass="btn-group">
-                  <asp:button runat="server" type="button" CssClass="btn btn-sm btn-outline-secondary" Text="View"/>
-                  <asp:button runat="server" type="button" CssClass="btn btn-sm btn-outline-secondary" Text="Edit"/>
-                </asp:panel>
-                <small class="text-body-secondary">9 mins</small>
-              </asp:panel>
-            </asp:panel>
-          </asp:panel>
-        </asp:panel>
-        <asp:panel runat="server" CssClass="col" >
-          <asp:panel runat="server" CssClass="card shadow-sm">
-            <asp:Panel runat="server" CssClass="image-container">
-                <asp:ImageButton runat="server" ImageUrl="../../assets/images/Convex_Sheriff.png" OnClick="Unnamed_Click"/>
-            </asp:Panel>
-            <asp:panel runat="server" CssClass="card-body">
-              <h5>Operator</h5>
-              <p class="card-text">Holi</p>
-              <asp:panel runat="server" CssClass="d-flex justify-content-between align-items-center">
-                <asp:panel runat="server" CssClass="btn-group">
-                  <asp:button runat="server" type="button" CssClass="btn btn-sm btn-outline-secondary" Text="View"/>
-                  <asp:button runat="server" type="button" CssClass="btn btn-sm btn-outline-secondary" Text="Edit"/>
-                </asp:panel>
-                <small class="text-body-secondary">9 mins</small>
-              </asp:panel>
-            </asp:panel>
-          </asp:panel>
-        </asp:panel>
-        <asp:panel runat="server" CssClass="col" >
-          <asp:panel runat="server" CssClass="card shadow-sm">
-            <asp:Panel runat="server" CssClass="image-container">
-                <asp:ImageButton runat="server" ImageUrl="../../assets/images/Convex_Sheriff.png" OnClick="Unnamed_Click"/>
-            </asp:Panel>
-            <asp:panel runat="server" CssClass="card-body">
-              <h5>Operator</h5>
-              <p class="card-text">Holi</p>
-              <asp:panel runat="server" CssClass="d-flex justify-content-between align-items-center">
-                <asp:panel runat="server" CssClass="btn-group">
-                  <asp:button runat="server" type="button" CssClass="btn btn-sm btn-outline-secondary" Text="View"/>
-                  <asp:button runat="server" type="button" CssClass="btn btn-sm btn-outline-secondary" Text="Edit"/>
-                </asp:panel>
-                <small class="text-body-secondary">9 mins</small>
-              </asp:panel>
-            </asp:panel>
-          </asp:panel>
-        </asp:panel>
-        <asp:panel runat="server" CssClass="col" >
-          <asp:panel runat="server" CssClass="card shadow-sm">
-            <asp:Panel runat="server" CssClass="image-container">
-                <asp:ImageButton runat="server" ImageUrl="../../assets/images/Convex_Sheriff.png" OnClick="Unnamed_Click"/>
-            </asp:Panel>
-            <asp:panel runat="server" CssClass="card-body">
-              <h5>Operator</h5>
-              <p class="card-text">Holi</p>
-              <asp:panel runat="server" CssClass="d-flex justify-content-between align-items-center">
-                <asp:panel runat="server" CssClass="btn-group">
-                  <asp:button runat="server" type="button" CssClass="btn btn-sm btn-outline-secondary" Text="View"/>
-                  <asp:button runat="server" type="button" CssClass="btn btn-sm btn-outline-secondary" Text="Edit"/>
-                </asp:panel>
-                <small class="text-body-secondary">9 mins</small>
-              </asp:panel>
-            </asp:panel>
-          </asp:panel>
-        </asp:panel>
+        
       </asp:panel>
     </div>
   </div>
 
+
 </main>
+    <!-- Example single danger button -->
+            <div class="dropdown" style="position:fixed; top: 100px; right: 25px;">
+              <a href="#" class="d-block link-body-emphasis text-decoration-none dropdown-toggle"
+                data-bs-toggle="dropdown" aria-expanded="false">
+                  <button type="button" class="btn btn-secondary"  style="background:rgb(28, 30, 31) !important; border-radius: 50%; width: 50px; height: 50px" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    <i class="fa-solid fa-filter fa-xl"></i>
+  </button>
+              </a>
+              
+              <ul class="dropdown-menu text-small">
+                <li style="width: 180px">
+                    <asp:DropDownList runat="server" CssClass="dropdown-item">
+                        <asp:ListItem Text="--Tipo de producto--"></asp:ListItem>
+                        <asp:ListItem Text="Coche"></asp:ListItem>
+                        <asp:ListItem Text="Moto"></asp:ListItem>
+                    </asp:DropDownList>
+                </li>
+                <li>
+                    <asp:DropDownList runat="server" CssClass="dropdown-item">
+                        <asp:ListItem Text="--Marca--"></asp:ListItem>
+                        <asp:ListItem Text="BMW"></asp:ListItem>
+                        <asp:ListItem Text="Ferrari"></asp:ListItem>
+                    </asp:DropDownList>
+                </li>
+                <li>
+                  <hr class="dropdown-divider">
+                </li>
+                <li><a class="dropdown-item" href="#">Aplicar</a></li>
+              </ul>
+            </div>
 <script async src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js" integrity="sha384-GNFwBvfVxBkLMJpYMOABq3c+d3KnQxudP/mGPkzpZSTYykLBNsZEnG2D9G/X/+7D" crossorigin="anonymous"></script></body>
+
 
 </asp:Content>

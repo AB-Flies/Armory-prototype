@@ -34,10 +34,10 @@ namespace Library
             WeaponType = null;
         }
 
-        public bool Read(int id)
+        public bool Read()
         {
             CADWeapon cad = new CADWeapon();
-            return cad.Read(this, id);
+            return cad.Read(this);
         }
 
         public static List<ENWeapon> ReadAll()
